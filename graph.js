@@ -13,7 +13,6 @@ let E = [
     {s:2, t:3, len:11},
     {s:3, t:4, len:6},
     {s:4, t:5, len:9},
-
 ];
 
 function make_graph() {
@@ -28,12 +27,12 @@ function make_graph() {
 
     //Add all edges
     for (let e of E) {
-        graph[e.s].edges.push({ target:e, t, length: e.len});
-        graph[e.t].edges.push({ target: e, s, length: e.len });
+        graph[e.s].edges.push({ target:e.t, length: e.len});
+        graph[e.t].edges.push({ target:e.s, length: e.len });
     }
 
     return graph;
 }
 
-make_graph();
+console.log(make_graph());
 
