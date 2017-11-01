@@ -34,5 +34,5 @@ function make_graph() {
     return graph;
 }
 
-console.log(make_graph());
+console.log(JSON.stringify(make_graph()));
 
